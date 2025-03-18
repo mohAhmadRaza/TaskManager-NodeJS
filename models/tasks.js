@@ -9,6 +9,19 @@ const TasksSchema = new mongoose.Schema({
     completed: {
         type: Boolean,
         default: false
+    },
+    date: {
+        type: String
+    },
+    time: {
+        type: String
+    },
+    description: {
+        type: String,
+        default: "No description added"
+    },
+    importance: {
+        type: String
     }
 });
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/FirstPage.css">
+  </head>
+  <body>
+      <div class="block">
+        <h1>To Do List</h1>
+        <h2>Create Tasks</h2>
+        <form method="POST" action="/tasks/createTask">
+          <div class="section">
+            <p>Title</p>
+            <input class="inp"
+              type="text"
+              name="title"
+              required
+              placeholder="e.g Wash Dishes"
+            />
+          </div>
+          <div class="section">
+            <p>Importance</p>
+            <input class="inp"
+              type="text"
+              name="importance"
+              required
+              placeholder="Important"
+            />
+          </div>
+          <div class="both">
+            <div class="section">
+              <p>Date</p>
+              <input class="inp" 
+                type="date"
+                name="date"
+                required
+                placeholder="09-09-2009"
+              />
+            </div>
+            <div class="section">
+              <p>Time</p>
+              <input class="inp" type="time" name="time" required placeholder="14:00" />
+            </div>
+          </div>
+          <div class="section">
+            <p>Description</p>
+            <textarea name="description"></textarea>
+          </div>
+          <input class="button" type="submit" value="Add Task" />
+        </form>
+      </div>
+  </body>
+</html>
