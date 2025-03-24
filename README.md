@@ -15,7 +15,7 @@ Task Manager is a web application that allows users to manage their daily tasks 
   - Verify Email
   - Get OTP
   - Reset Password
-
+![Image](https://github.com/user-attachments/assets/19d02539-4987-4571-b465-605fda9f566f)
 
 - **Task Management**
 
@@ -24,6 +24,8 @@ Task Manager is a web application that allows users to manage their daily tasks 
   - Update a Task
   - Delete a Task
   - Mark Task as Completed
+![Image](https://github.com/user-attachments/assets/c81aa237-83f0-40dc-91d7-8e41553155f6)
+
 
 ## Technologies Used
 
