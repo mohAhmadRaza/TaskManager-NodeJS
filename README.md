@@ -1,3 +1,4 @@
+![Image](https://github.com/user-attachments/assets/c9261f55-92b7-4d41-ba0a-aeef772d2f56)
 # Task Manager
 
 ## Description
