@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #70006b, #ac56d7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block {
+    width: 25%;
+    display: block;
+    padding: 40px 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+p {
+    color: rgb(95, 0, 95);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.inp {
+    width: 90%;
+    font-size: 15px;
+    color: purple;
+}
+
+.button {
+    width: 25%;
+    margin: auto;
+    height: 40px;
+    border: none;
+    background-color: rgb(95, 0, 95);
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+h1 {
+    color: rgb(95, 0, 95);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.error {
+    position: absolute;
+    top: 4%;
+    left: 35.5%;
+    margin: auto;
+    width: 30%;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    z-index: 1000;
+}
+
+
+.sectionInp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border: 1px solid rgb(189, 189, 189);
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.sectionInp i {
+    font-size: 18px;
+    color: grey;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 7px;
+}
+
+.input {
+    width: 17%;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}

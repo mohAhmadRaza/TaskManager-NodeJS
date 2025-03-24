@@ -8,25 +8,24 @@
     text-decoration: none;
     outline: none;
     border: 0;
-    scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(255, 215, 255);
-    margin: 0; /* Removes default margin */
-    height: 100vh; /* Ensures it covers the full viewport */
-    width: 100vw; /* Ensures it covers full width */
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #70006b, #ac56d7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .block {
     margin: auto;
     width: 25%;
     display: block;
-    margin-top: 70px;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px 5px #ffcaf5;
 }
 
 .section {
@@ -36,12 +35,12 @@ body {
     flex: 1;
 }
 
-.inp {
+.inp, select {
     width: 100%;
     height: 50px;
     font-size: 15px;
     border: 1px solid rgb(186, 186, 186);
-    padding-left: 10px;
+    padding: 10px;
     margin-bottom: 20px;
 }
 
@@ -58,6 +57,7 @@ textarea {
     height: 100px;
     resize: none;
     margin-bottom: 15px;
+    padding: 10px;
 }
 
 .button {
@@ -80,4 +80,43 @@ h2 {
     line-height: 20px;
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.error {
+    position: absolute;
+    top: 4%;
+    left: 35.5%;
+    margin: auto;
+    width: 30%;
+    display: block;
+    background-color: rgb(208, 141, 208);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    z-index: 1000;
+}
+
+.auth a {
+    padding: 10px;
+    background-color: rgb(95, 0, 95);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block; /* Ensures proper spacing */
+    border-radius: 5px; /* Optional: Smooth edges */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.auth {
+    max-width: 100%;
+    position: absolute;
+    right: 0; /* Instead of left: 80%; */
+    top: 0;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.auth a:hover {
+    background-color: rgb(120, 0, 120);
 }

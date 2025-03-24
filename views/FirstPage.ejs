@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="stylesheets/FirstPage.css">
   </head>
   <body>
+        <% if (errorMessage.length > 0) { %>
+          <div class="error">
+            <p><%= errorMessage %></p>
+          </div>
+        <% } %>
       <div class="block">
         <h1>To Do List</h1>
         <h2>Create Tasks</h2>
@@ -21,13 +26,25 @@
             />
           </div>
           <div class="section">
-            <p>Importance</p>
-            <input class="inp"
-              type="text"
-              name="importance"
-              required
-              placeholder="Important"
-            />
+            <p>Category</p>
+            <select name="importance" id="category" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Home">Home 🏡</option>
+              <option value="Work">Work 💼</option>
+              <option value="Personal">Personal 👤</option>
+              <option value="Urgent">Urgent ⏳</option>
+              <option value="Shopping">Shopping 🛒</option>
+              <option value="Health">Health 🏥</option>
+              <option value="Finance">Finance 💰</option>
+              <option value="Study">Study 📖</option>
+              <option value="Meetings">Meetings 📅</option>
+              <option value="Fun">Fun 🎉</option>
+              <option value="Travel">Travel ✈️</option>
+              <option value="Family">Family 👨‍👩‍👧</option>
+              <option value="Important">Important ❗</option>
+              <option value="Cleaning">Cleaning 🧹</option>
+              <option value="Remainders">Reminders 🔔</option>              
+          </select>
           </div>
           <div class="both">
             <div class="section">

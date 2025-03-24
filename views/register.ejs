@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/LoginPage.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <% if (errorMessage.length > 0) { %>
+    <div class="error">
+      <p><%= errorMessage %></p>
+    </div>
+    <% } %>
+    <div class="block">
+      <form method="POST" action="/auth/register">
+        <h1>Register</h1>
+        <p>Create Your Account!</p>
+        <div class="sectionInp">
+          <i class='bx bxs-user-circle'></i>
+          <input
+            class="inp"
+            type="text"
+            name="name"
+            required
+            placeholder="Name"
+          />
+        </div>
+        <div class="sectionInp">
+          <i class="bx bx-envelope"></i>
+          <input
+            class="inp"
+            type="email"
+            name="email"
+            required
+            placeholder="user@gmail.com"
+          />
+        </div>
+        <div class="sectionInp">
+          <i class="bx bxs-low-vision"></i>
+          <input
+            class="inp"
+            type="password"
+            name="password"
+            required
+            placeholder="Password"
+          />
+        </div>
+        <input class="sectionInp" style="width: 100%; background: transparent; font-size: 15px; background: linear-gradient(to left, #70006b, #ac56d7); color: white; font-weight: 600; margin: 20px 0px;" type="submit" value="Signup" />
+      </form>
+      <a href="/auth/loginnow" style="color:#70006b"><p style="text-align: center; margin-top: 20px; font-size: 14px;">Already have an account? <span style="color: #ac56d7; text-decoration: underline;">Log In</span></p></a>
+    </div>
+  </body>
+</html>

@@ -1,16 +1,20 @@
 const TasksModel = require('../models/tasks');
+const flash = require('connect-flash');
 
 const DeleteTask = async (req, res) => {
 
-    let {taskId} = req.params.id;
+    let taskId = req.params.id;
+    console.log(taskId);
 
     const deleted = await TasksModel.findOneAndDelete({_id: taskId});
+    console.log(deleted);
 
-    if (updated){
-        res.status(200).json({deleted});
+    const tasks = await TasksModel.find({});
+
+    if (deleted){
+        req.flash("Failure", "Successfully Removed.");
+        res.redirect("/tasks/getTasks");
     }
-
-    res.status(404).json({msg: "Task not found to be deleted!!"});
 }
 
 module.exports = DeleteTask;

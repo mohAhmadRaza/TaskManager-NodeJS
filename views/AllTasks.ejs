@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="/stylesheets/AllTasks.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <% if (errorMessage.length > 0) { %>
+        <div class="error">
+          <p><%= errorMessage %></p>
+        </div>
+    <% } %>
+    <div class="main">
+        <div class="upperstyle"></div>
+        <div class="alltasks">
+            <div class="tasks">
+                <div class="left">
+                    <h2>Add new item</h2>
+                    <p>Date and time</p>
+                    <p>Categoty</p>
+                </div>
+                <div class="right">
+                    <a href="/"><i class='bx bx-plus-circle'></i></a>
+                </div>
+            </div>
+            <% if(tasks.length > 0) { %>
+                <% tasks.forEach((task) => {%>
+                    <div class="tasks">
+                        <div class="tasksLeft">
+                            <h2><%= task.name %></h2>
+                            <p><%= task.date %> at <%= task.time %></p>
+                            <p style="color: red"><%= task.importance%></p>
+                            <div class="edit">
+                                <a href="/tasks/updateTask/<%= task._id %>"><i class='bx bxs-edit-alt' ></i></a>
+                                <a href="/tasks/deleteTask/<%= task._id %>"><i class='bx bx-message-square-x' ></i></a>
+                            </div>
+                        </div>
+                        <div class="tasksRight">
+                            <input id="checkboxes" type="checkbox">
+                        </div>
+                    </div>
+            <% })} %>
+        </div>
+        <div class="confirm">
+            <a href="/">Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
